@@ -26,7 +26,7 @@ print("舰长数为:",num)
 print("正在处理，请稍后.....")
 
 while num:
-    url = f'https://api.live.bilibili.com/xlive/app-room/v1/guardTab/topList?roomid={room_id}&page={page}&ruid={ruid}&1576121page_size=10'
+    url = f'https://api.live.bilibili.com/xlive/app-room/v1/guardTab/topList?roomid={room_id}&page={page}&ruid={ruid}&1576121&page_size=10'
     response = requests.request('get', url, headers=headers).json()
     order = order + 1
     uid = response['data']['list'][list_pages]['uid']
